@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
     public Canvas failed;
     //For when finished
     public Canvas finished;
+    //Explain canvas
+    public Canvas explain;
 
     
 
@@ -188,4 +190,5 @@ public class Movement : MonoBehaviour
     //UIthings
     public void ReloadLevel() { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
     public void NextLevel() { SceneManager.LoadScene("Intro"); }
+    public void StartGame() { explain.enabled = false; }
 }
