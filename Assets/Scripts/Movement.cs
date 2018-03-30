@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
     public Canvas finished;
     //Explain canvas
     public Canvas explain;
+    //Buttons canvas
+    public Canvas buttons;
 
     
 
@@ -40,6 +42,7 @@ public class Movement : MonoBehaviour
         //no failed of finished on beginning
         failed.enabled = false;
         finished.enabled = false;
+        buttons.enabled = false;
         //set if not already done
         PlayerPrefs.SetInt("toHit", 1);
         //what thing to hit
@@ -102,14 +105,22 @@ public class Movement : MonoBehaviour
             {
                 //to know what has been hit
                 Debug.Log("I've registerd the hit");
-                if (toHit + 1==7)
+                if (toHit + 1 == 7)
                 {
                     Debug.Log("You finished the game");
                     finished.enabled = true;
+                    buttons.enabled = false;
+                    Destroy(col.gameObject);
+                    whereToGo.y = 100;
+                    transform.position = whereToGo;
+
                 }
-                PlayerPrefs.SetInt("toHit", (toHit + 1));
-                Destroy(col.gameObject);
-                Destroy(gameObject);
+                else
+                {
+                    PlayerPrefs.SetInt("toHit", (toHit + 1));
+                    Destroy(col.gameObject);
+                    Destroy(gameObject);
+                }
             }
             else
             {
@@ -117,6 +128,7 @@ public class Movement : MonoBehaviour
                 Debug.Log("Wrong thing hit their target");
                 //show failed canvas
                 failed.enabled = true;
+                buttons.enabled = false;
             }
         } else if (col.gameObject.tag == "Blocks")
         {
@@ -190,5 +202,5 @@ public class Movement : MonoBehaviour
     //UIthings
     public void ReloadLevel() { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
     public void NextLevel() { SceneManager.LoadScene("Intro"); }
-    public void StartGame() { explain.enabled = false; }
+    public void StartGame() { explain.enabled = false; buttons.enabled = true; }
 }

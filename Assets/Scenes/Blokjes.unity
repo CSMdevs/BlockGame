@@ -442,6 +442,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &356258037
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1188,7 +1189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1783749162}
+      - m_Target: {fileID: 1473575374}
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
@@ -1885,6 +1886,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &856467294
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2504,6 +2506,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &1130773091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2794,6 +2797,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &1298095189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3071,6 +3075,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &1473575375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3583,6 +3588,7 @@ MonoBehaviour:
   failed: {fileID: 2097635960}
   finished: {fileID: 858885430}
   explain: {fileID: 1966588162}
+  buttons: {fileID: 1652671379}
 --- !u!54 &1783749163
 Rigidbody:
   m_ObjectHideFlags: 0
